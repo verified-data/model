@@ -211,7 +211,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
      * @param  array|string|null  $attributes
      * @return void
      */
-    public function addHidden($attributes = null)
+    public function addHidden(array|string|null $attributes = null)
     {
         $attributes = is_array($attributes) ? $attributes : func_get_args();
 
@@ -260,7 +260,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
      * @param  array|string|null  $attributes
      * @return void
      */
-    public function addVisible($attributes = null)
+    public function addVisible(array|string|null $attributes = null)
     {
         $attributes = is_array($attributes) ? $attributes : func_get_args();
 
@@ -773,7 +773,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
      * @param  array|null  $except
      * @return \Jenssegers\Model\Model
      */
-    public function replicate(array $except = null)
+    public function replicate(array|null $except = null)
     {
         $except = $except ?: [];
 
